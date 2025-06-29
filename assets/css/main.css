@@ -657,7 +657,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -775,7 +775,7 @@ section,
 }
 
 .about .content ul li {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
 }
