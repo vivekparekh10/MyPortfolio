@@ -30,14 +30,19 @@
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
+ document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop(); // e.g., "about.html"
 
+  document.querySelectorAll('#navmenu a').forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
   });
+});
+
 
   /**
    * Toggle mobile nav dropdowns
